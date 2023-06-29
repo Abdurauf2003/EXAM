@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-variant</title>
+    <link rel="stylesheet" href="./css/basic.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+            <h1>2-variant</h1><hr>
+            <h3>1-topshiriq</h3><hr>
+            <h5>Internet ilovalarni ishlab chiqish fanidan fanidan amaliy vazifa:<br>
+                Topishmoqlar dasturini tuzing. Foydalanuvchiga 5 topishmoq bering. <br>Barchasiga javob bersa - unga baxo 5 berasiz. 4 javob bersa - baxo 4.</h5><hr>
+            HTML:<br>
+            <textarea name="v2t1" id="html" cols="60" rows="10" readonly="true">
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topishmoqlar</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<form class="form">
+    <label>
+        Yer tagida oltin qoziq
+        U hammaga bo'lar oziq
+        <input type="text" class="input1">
+    </label>
+    <label>
+        Qozonda emas qaynaydi
+        Qishin yozin tinmaydi
+        <input type="text" class="input2">
+    </label>
+    <label>
+        Qat qat qatlama
+        Aqling bo'lsa tashlama
+        <input type="text" class="input3">
+    </label>
+    <label>
+        Bir qushim bor
+        Suyagi yo'q
+        <input type="text" class="input4">
+    </label>
+    <label>
+        Kelar ketar izi yo'q
+        Qaragani ko'zi yo'q
+        <input type="text" class="input5">
+    </label>
+    <button type="button" class="btn">Tekshirish</button>
+    <p class="info"></p>
+</form>
+<script src="./script.js"></script>
+</body>
+</html></textarea><hr>
+                CSS:<br><textarea name="v2t1" id="css" cols="60" rows="10" readonly="true">
+.form {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+.btn {
+width: 200px;
+}
+                </textarea><hr>
+                JavaScript:<br><textarea name="v2t1" id="js" cols="60" readonly="true" rows="10">
+const input1 = document.querySelector(".input1")
+const input2 = document.querySelector(".input2")
+const input3 = document.querySelector(".input3")
+const input4 = document.querySelector(".input4")
+const input5 = document.querySelector(".input5")
+const button = document.querySelector(".btn")
+const info = document.querySelector(".info")
+
+let count = 0;
+let option1
+let option2
+let option3
+let option4
+let option5
+const answer1 = "Sabzi"
+const answer2 = "Buloq"
+const answer3 = "Kitob"
+const answer4 = "Kapalak"
+const answer5 = "Shamol"
+input1.addEventListener("input", (e) => {
+    option1 = e.target.value
+})
+input2.addEventListener("input", (e) => {
+    option2 = e.target.value
+})
+input3.addEventListener("input", (e) => {
+    option3 = e.target.value
+})
+input4.addEventListener("input", (e) => {
+    option4 = e.target.value
+})
+input5.addEventListener("input", (e) => {
+    option5 = e.target.value
+})
+button.addEventListener("click", () => {
+    if(option1 === answer1) {
+        count++;
+    }
+    if(option2 === answer2) {
+        count++;
+    }
+    if(option3 === answer3) {
+        count++;
+    }
+    if(option4 === answer4) {
+        count++;
+    }
+    if(option5 === answer5) {
+        count++;
+    }
+    if(count>=5) {
+        info.innerHTML = "Barcha savollarga javob berdingiz. Bahoyingiz: 5"
+    }
+    if(count===4) {
+        info.innerHTML = "4 ta savolga javob berdingiz. Bahoyingiz: 4"
+    }
+    if(count===3) {
+        info.innerHTML = "3 ta savolga javob berdingiz. Bahoyingiz: 3"
+    }
+    if(count<3) {
+        info.innerHTML = "Siz yetarlicha savollarga javob berolmadingiz. Bahoyingiz: 2"
+    }
+})>
+</textarea><hr>
+<h3>2-topshiriq</h3><hr>
+<h5>
+OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:<br>
+Ko‘paytirish (Karra) jadvalini tekshirish dasturi tuzilsin. <br>
+Foydalanuvchi 2 ta son kiritsin. Bu sonlarning qiymatlari 1 dan katta, <br>
+9 dan kichikligini tekshirilsin. Ikki sondan keyin ularning ko‘paytmasi javobi ham kiritilsin. <br>
+Agar javob to‘gri kiritilsa, foydalanuvchini tabriklansin, <br>
+agar javob notog‘ri bo‘lsa uni ko‘paytirish jadvalini yodlashi va to‘g‘ri javob haqidagi habar bersin.
+</h5><hr>
+C++:<br>
+<textarea name="v2t2" id="cpp" cols="60" rows="10" readonly="true">
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    int a, b, c;
+    cout << "1-sonni kiriting: "; cin >> a;
+    cout << "2-sonni kiriting: "; cin >> b;
+    cout << a << " * " << b << " = "; cin >> c;
+    if ((a > 1 && a < 9) && (b > 1 && b < 9)) {
+        if(c == a * b) {
+            cout << "Tabriklaymiz javobni to'g'ri topdingiz";
+            } else {
+            cout << "Javob xato, ko'paytirish jadvalini yodlang, to'g'ri javob: " << a * b;
+            }
+          } else {
+            cout << "Kiritilgan son berilgan oraliqda emas";
+          }
+          return 0;
+        }
+</textarea><hr>
+<h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
+        </div>
+    </div>
+</body>
+
+</html>

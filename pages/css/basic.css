@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+.container {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200vh;
+    background: linear-gradient(45deg, lime, lightgreen, lightblue, cyan);
+}
+h1, h3, h5 {
+    text-align: center;
+}
+.card {
+    border: 1px black solid;
+    padding: 10px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+img {
+    border: 1px solid black;
+    margin: 10px;
+    transition: 1s;
+}
+img:hover {
+    transform: scale(2);
+    transition: 2s;
+}
+textarea {
+    margin: auto;
+    padding: 10px;
+    font-family: 'Lucida Console';
+    background: #003080;
+    color: #FFF;
+    outline: none;
+    border-radius: 10px;
+}

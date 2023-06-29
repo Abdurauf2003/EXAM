@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, lime, lightgreen, lightblue, cyan);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    user-select: none;
+}
+
+h1 {
+    text-align: center;
+    user-select: none;
+}
+
+select {
+    user-select: none;
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px black solid;
+    background: rgba(255, 255, 255, 0.35);
+    transition: 2.5s;
+}
+
+select:hover {
+    border: 1px white solid;
+    background: #333;
+    color: white;
+    transition: 2.5s;
+}
+
+h3 {
+    margin-top: 200px;
+    text-decoration: none;
+    user-select: none;
+}
