@@ -14,13 +14,194 @@
         <div class="card">
             <h1>8-variant</h1><hr>
             <h3>1-topshiriq</h3><hr>
-            <h5></h5><hr>
-            HTML:<br><textarea name="v8t1" id="html" cols="60" rows="10" readonly="true"></textarea><hr>
-            CSS:<br><textarea name="v8t1" id="css" cols="60" rows="10" readonly="true"></textarea><hr>
-            JavaScript:<br><textarea name="v8t1" id="js" cols="60" readonly="true" rows="10"></textarea><hr>
+            <h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:<br>
+                Foydalanuvchi bir, ikki yoki uch xonali son kiritsin, <br>ushbu sonni so‘z bilan yozib chiqaradigan dastur tuzilsin. Misol uchun:
+                		<br>Son kiriting: 651.
+                        <br>Kiritgan Son: Olti yuz ellik bir.</h5><hr>
+            C++ (1):<br><textarea name="v8t1" id="cpp" cols="60" rows="10" readonly="true">
+#include <bits/stdc++.h> 
+using namespace std; 
+void convert_to_words(char* number) 
+{ 
+    int length = strlen(number);
+    if (length == 0) { 
+      cout<< "Bo'sh string";
+      return;
+    } 
+    if (length > 3) { 
+      cout<< "3 dan katta uzunlik qabul qilinmaydi";
+      return;
+    } 
+    char* single_digits[] = { "nol", "bir", "ikki",  "uch", "to'rt'", "besh", "olti", "yetti", "sakkiz", "to'qqiz" }; 
+
+    char* tens_multiple[] = { " ", "o'n", "yigirma", "o'ttiz", "qirq", "ellik", "oltmish", "yetmish", "sakson", "to'qson" }; 
+
+    char* tens_power[] = { "yuz"}; 
+    cout << "\n" << number << ": "; 
+    if (length == 1) { 
+        cout << single_digits[*number - '0'] << "\n"; 
+        return; 
+    } 
+    while (*number != '\0') { 
+        if (length ==  3) { 
+            if (*number - '0' != 0) { 
+                cout << single_digits[*number - '0'] << " "; 
+                cout << tens_power[length - 3]<< " " ;
+            } 
+            --length; 
+        } 
+        else { 
+              int i = *number - '0'; 
+        string tm = i ? tens_multiple[i] : ""; 
+                cout << tm << " "; 
+                ++number; 
+                if (*number != '0') {
+                    cout << single_digits[*number - '0'] << " "; 
+        }
+          } 
+        ++number; 
+    } 
+}
+int main() 
+{ 
+    convert_to_words("9923"); 
+    convert_to_words("546"); 
+    convert_to_words("87"); 
+    convert_to_words("3"); 
+    return 0; 
+}</textarea><hr>
+            C++ (2):<br><textarea name="v8t1" id="cpp" cols="60" readonly="true" rows="10">
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    int x;
+    cout << "Son kiriting: "; cin >> x;
+    if( x > 0 && x < = 999) {
+        switch(x/100) {
+            case 1:
+                cout << "yuz "; break;
+            case 2:
+                cout << "ikki yuz "; break;
+            case 3:
+                cout << "uch yuz "; break;
+            case 4:
+                cout << "to'rt yuz "; break;
+            case 5:
+                cout << "besh yuz "; break;
+            case 6:
+                cout << "olti yuz "; break;
+            case 7:
+                cout << "yetti yuz "; break;
+            case 8:
+                cout << "sakkiz yuz "; break;
+            case 9:
+                cout << "to'qqiz yuz "; break;
+        }
+        switch((x/10)%10) {
+            case 1:
+                cout << "o'n "; break;
+            case 2:
+                cout << "yigirma "; break;
+            case 3: 
+                cout << "o'ttiz "; break;
+            case 4:
+                cout << "qirq "; break;
+            case 5:
+                cout << "ellik "; break;
+            case 6:
+                cout << "oltmish "; break;
+            case 7:
+                cout << "yetmish "; break;
+            case 8:
+                cout << "sakson "; break;
+            case 9:
+                cout << "to'qson "; break;
+        }
+        switch(x%10) {
+            case 1:
+                cout << "bir"; break;
+            case 2:
+                cout << "ikki"; break;
+            case 3:
+                cout << "uch"; break;
+            case 4:
+                cout << "to'rt"; break;
+            case 5:
+                cout<<"besh"; break;
+            case 6:
+                cout << "olti"; break;
+            case 7:
+                cout << "yetti"; break;
+            case 8:
+                cout << "sakkiz"; break;
+            case 9:
+                cout << "to'qqiz"; break;
+        }
+    }
+    if(x == 0) {
+        cout << "nol";
+    }
+    if(x > 999 || x < 0) {
+        cout << "Bu son berilgan oraliqda emas";
+    }
+}</textarea><hr>
             <h3>2-topshiriq</h3><hr>
-            <h5></h5><hr>
-            C++:<br><textarea name="v8t2" id="cpp" cols="60" rows="10" readonly="true"></textarea><hr>
+            <h5>Internet ilovalarni ishlab chiqish fanidan fanidan amaliy vazifa:<br>
+            Foydalanuvchi unda bor pulini kiritsin. Va molni tanlasin. <br>
+            Puli yetsa - “sotib oldingiz” deb chiqaring. <br>
+            Puli yetmasa - “uzr, pul yetmadi” deb yozing.</h5><hr>
+            HTML:<br><textarea name="v8t2" id="html" cols="60" rows="10" readonly="true">
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUL</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form>
+        <label>
+            <input type="number" class="input">
+        </label>
+        <select class="techniques">
+            <option></option>
+            <option value="1000">Telefon</option>
+            <option value="7000">Kompyuter</option>
+            <option value="5000">Noutbuk</option>
+            <option value="3000">Televizor</option>
+        </select>
+        <button type="button" class="btn">Sotib olish</button>
+        <p class="info"></p>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html></textarea><hr>
+            CSS:<br><textarea name="v8t2" id="css" cols="60" rows="10" readonly="true">/* No code */</textarea><hr>
+            JavaScript:<br><textarea name="v8t2" id="js" cols="60" rows="10" readonly="true">
+const input = document.querySelector(".input");
+const techniques = document.querySelector(".techniques");
+const button = document.querySelector(".btn");
+const info = document.querySelector(".info");
+let amount;
+let selectedItem;
+input.addEventListener("input", (e) => {
+    amount = +e.target.value;
+})
+techniques.addEventListener("click", (e) => {
+    selectedItem = +e.target.value;
+})
+button.addEventListener("click", () => {
+    console.log(amount);
+    console.log(selectedItem);
+    if(amount >= selectedItem) {
+        info.innerHTML = "Sotib oldingiz";
+    } else {
+        info.innerHTML = "Uzr, pul yetmadi";
+    }
+})</textarea><hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>

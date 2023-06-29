@@ -71,39 +71,38 @@ gap: 5px;
 width: 200px;
 }</textarea><hr>
                 JavaScript:<br><textarea name="v2t1" id="js" cols="60" readonly="true" rows="10">
-const input1 = document.querySelector(".input1")
-const input2 = document.querySelector(".input2")
-const input3 = document.querySelector(".input3")
-const input4 = document.querySelector(".input4")
-const input5 = document.querySelector(".input5")
-const button = document.querySelector(".btn")
-const info = document.querySelector(".info")
-
+const input1 = document.querySelector(".input1");
+const input2 = document.querySelector(".input2");
+const input3 = document.querySelector(".input3");
+const input4 = document.querySelector(".input4");
+const input5 = document.querySelector(".input5");
+const button = document.querySelector(".btn");
+const info = document.querySelector(".info");
 let count = 0;
-let option1
-let option2
-let option3
-let option4
-let option5
-const answer1 = "Sabzi"
-const answer2 = "Buloq"
-const answer3 = "Kitob"
-const answer4 = "Kapalak"
-const answer5 = "Shamol"
+let option1;
+let option2;
+let option3;
+let option4;
+let option5;
+const answer1 = "Sabzi";
+const answer2 = "Buloq";
+const answer3 = "Kitob";
+const answer4 = "Kapalak";
+const answer5 = "Shamol";
 input1.addEventListener("input", (e) => {
-    option1 = e.target.value
+    option1 = e.target.value;
 })
 input2.addEventListener("input", (e) => {
-    option2 = e.target.value
+    option2 = e.target.value;
 })
 input3.addEventListener("input", (e) => {
-    option3 = e.target.value
+    option3 = e.target.value;
 })
 input4.addEventListener("input", (e) => {
-    option4 = e.target.value
+    option4 = e.target.value;
 })
 input5.addEventListener("input", (e) => {
-    option5 = e.target.value
+    option5 = e.target.value;
 })
 button.addEventListener("click", () => {
     if(option1 === answer1) {
@@ -122,16 +121,16 @@ button.addEventListener("click", () => {
         count++;
     }
     if(count>=5) {
-        info.innerHTML = "Barcha savollarga javob berdingiz. Bahoyingiz: 5"
+        info.innerHTML = "Barcha savollarga javob berdingiz. Bahoyingiz: 5";
     }
     if(count===4) {
-        info.innerHTML = "4 ta savolga javob berdingiz. Bahoyingiz: 4"
+        info.innerHTML = "4 ta savolga javob berdingiz. Bahoyingiz: 4";
     }
     if(count===3) {
-        info.innerHTML = "3 ta savolga javob berdingiz. Bahoyingiz: 3"
+        info.innerHTML = "3 ta savolga javob berdingiz. Bahoyingiz: 3";
     }
     if(count<3) {
-        info.innerHTML = "Siz yetarlicha savollarga javob berolmadingiz. Bahoyingiz: 2"
+        info.innerHTML = "Siz yetarlicha savollarga javob berolmadingiz. Bahoyingiz: 2";
     }
 })</textarea><hr>
 <h3>2-topshiriq</h3><hr>

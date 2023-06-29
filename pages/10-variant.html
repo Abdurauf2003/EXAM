@@ -14,13 +14,72 @@
         <div class="card">
             <h1>10-variant</h1><hr>
             <h3>1-topshiriq</h3><hr>
-            <h5></h5><hr>
-            HTML:<br><textarea name="v10t1" id="html" cols="60" rows="10" readonly="true"></textarea><hr>
-            CSS:<br><textarea name="v10t1" id="css" cols="60" rows="10" readonly="true"></textarea><hr>
-            JavaScript:<br><textarea name="v10t1" id="js" cols="60" readonly="true" rows="10"></textarea><hr>
+            <h5>Internet ilovalarni ishlab chiqish fanidan fanidan amaliy vazifa:<br>
+            Qo‘yliqqa, Chorsuga va Oloy bozorga boradigan avtobuslarni chiqaradigan dasturni tuzing.<br>Foydalanuvchi Qo‘yliqni tanlasa 7, 93 deb chiqaring. Chorsu - 3, 54, 12. Oloy - 434, 5545, 11111.</h5><hr>
+            HTML:<br><textarea name="v10t1" id="html" cols="60" rows="10" readonly="true">
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avtobus</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="buttons">
+        <button class="button1">Qo'yliq</button>
+        <button class="button2">Chorsu</button>
+        <button class="button3">Oloy</button>
+    </div>
+    <p class="info"></p>  
+    <script src="./script.js"></script>
+</body>
+</html></textarea><hr>
+            CSS:<br><textarea name="v10t1" id="css" cols="60" rows="10" readonly="true">
+.buttons {
+    width: 200px;
+    margin: 10vh auto;
+}
+.info {
+    text-align: center;
+}</textarea><hr>
+            JavaScript:<br><textarea name="v10t1" id="js" cols="60" rows="10" readonly="true">
+const button1 = document.querySelector(".button1");
+const button2 = document.querySelector(".button2");
+const button3 = document.querySelector(".button3");
+const info = document.querySelector(".info");
+button1.addEventListener("click", (e) => {
+    info.innerHTML = "7 va 93 avtobuslar boradi";
+})
+button2.addEventListener("click", (e) => {
+    info.innerHTML = "3, 54 va 12 avtobuslar boradi";
+})
+button3.addEventListener("click", (e) => {
+    info.innerHTML = "434, 5545 va 11111 avtobuslar boradi";
+})</textarea><hr>
             <h3>2-topshiriq</h3><hr>
-            <h5></h5><hr>
-            C++:<br><textarea name="v10t2" id="cpp" cols="60" rows="10" readonly="true"></textarea><hr>
+            <h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:<br>
+            Foydalanuvchi ikkita son kiritsin. Ushbu sonlarni birinchisidan <br>
+            ikkinchisi oralag‘idagi juft sonlarni va ularni yig‘indisini hisoblaydigan dastur tuzilsin.</h5><hr>
+            C++:<br><textarea name="v10t2" id="cpp" cols="60" rows="10" readonly="true">
+#include <iostream>
+using namespace std;
+int main() {
+    int a,b,sum=0;
+    cout << "Boshlang'ich sonni kiriting: "; cin >> a;
+    cout << "Oxirgi sonni kiriting: "; cin >> b;
+    if(a % 2 == 0) {
+        for(int i=a; i<=b; i+=2) {
+            sum+=i;
+        }
+    } else if(a%2==1) {
+        a=a+1;
+        for(int i=a; i<=b; i+=2) 
+        sum+=i;
+    }
+    cout << "Juft sonlarni yig'indisi: " << sum;
+    return 0; }</textarea><hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>
