@@ -14,13 +14,96 @@
         <div class="card">
             <h1>5-variant</h1><hr>
             <h3>1-topshiriq</h3><hr>
-            <h5></h5><hr>
-            HTML:<br><textarea name="v5t1" id="html" cols="60" rows="10" readonly="true"></textarea><hr>
-            CSS:<br><textarea name="v5t1" id="css" cols="60" rows="10" readonly="true"></textarea><hr>
-            JavaScript:<br><textarea name="v5t1" id="js" cols="60" readonly="true" rows="10"></textarea><hr>
+            <h5>Internet ilovalarni ishlab chiqish fanidan fanidan amaliy vazifa:<br>
+            Matematik hisob kitoblarni dasturlash: To‘gri burchakli uchburchak <br> yuzi hamda perimetrni hisoblash.</h5><hr>
+            HTML:<br><textarea name="v5t1" id="html" cols="60" rows="10" readonly="true">
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uchburchak yuzi va perimetrini hisoblash</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form class="form">
+        <label>
+            a-tomonni kiriting
+            <input type="number" class="input1">
+        </label>
+        <label>
+            b-tomonni kiriting
+            <input type="number" class="input2">
+        </label>
+        <label>
+            c-tomonni kiriting
+            <input type="number" class="input3">
+        </label>
+        <button type="button" class="btn">Hisoblash</button>
+        <p class="info"></p>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html></textarea><hr>
+            CSS:<br><textarea name="v5t1" id="css" cols="60" rows="10" readonly="true">// No code</textarea><hr>
+            JavaScript:<br><textarea name="v5t1" id="js" cols="60" readonly="true" rows="10">
+const input1 = document.querySelector(".input1");
+const input2 = document.querySelector(".input2");
+const input3 = document.querySelector(".input3");
+const button = document.querySelector(".btn");
+const info = document.querySelector(".info");
+let a;
+let b;
+let c;
+input1.addEventListener("input", (e) => {
+    a = +e.target.value;
+})
+input2.addEventListener("input", (e) => {
+    b = +e.target.value;
+})
+input3.addEventListener("input", (e) => {
+    c = +e.target.value;
+})
+button.addEventListener("click", () => {
+    if(!c) {
+        info.innerHTML = Uchburchak yuzi: ${a*b/2};
+    }
+    else {
+        info.innerHTML = Uchburchak perimetri: ${a+b+c};
+    }   
+})</textarea><hr>
             <h3>2-topshiriq</h3><hr>
-            <h5></h5><hr>
-            C++:<br><textarea name="v5t2" id="cpp" cols="60" rows="10" readonly="true"></textarea><hr>
+            <h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:<br>
+            Foydalanuvchi to‘xtovsiz sonlar kiritsin. 0 sonini kiritganidan keyin <br> dastur o‘z ishini to‘xtatsin va nechta son kiritganini, <br> ularning umumiy yig‘indisini, sonlarning eng katta qiymatini, <br> eng kichigini  va o‘rtacha qiymatini hisoblaydigan dastur tuzilsin.</h5><hr>
+            C++:<br><textarea name="v5t2" id="cpp" cols="60" rows="10" readonly="true">
+#include <iostream>
+using namespace std;
+int main() {
+    int a, c, sum=0, large=0, small=0, average;
+    cout << "Sonlarni kriting: " << endl;
+    for(;;) {
+        cin >> a;
+        c++;
+        sum+=a;
+        if(a > large) {
+            large = a;
+        }
+        if(a < small) {
+            small = a;
+        }
+        average = sum/c;
+        if(a == 0) {
+            cout << "\n Nechta son kiritilgani: " << c;
+            cout << "\n Sonlarning umumiy yig'indisi: " << sum;
+            cout << "\n Sonlarning eng katta qiymati: " << large;
+            cout << "\n Sonlarning eng kichik qiymati: " << small;
+            cout << "\n Sonlarning o'rtacha qiymati: " << average;
+            break;
+        } else continue;
+    }
+    return 0;
+}</textarea><hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>

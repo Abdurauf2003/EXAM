@@ -14,13 +14,142 @@
         <div class="card">
             <h1>4-variant</h1><hr>
             <h3>1-topshiriq</h3><hr>
-            <h5></h5><hr>
-            HTML:<br><textarea name="v4t1" id="html" cols="60" rows="10" readonly="true"></textarea><hr>
-            CSS:<br><textarea name="v4t1" id="css" cols="60" rows="10" readonly="true"></textarea><hr>
-            JavaScript:<br><textarea name="v4t1" id="js" cols="60" readonly="true" rows="10"></textarea><hr>
+            <h5>Internet vositalari tizimi fanidan amaliy vazifa:<br>
+            Quyidagi elementlardan AnalogWrite funksiyasidan foydalangan holda <br> 1 - LEDni asta o‘chiring/yoqing. Loop funksiyai bir <br>marotaba bajarilganda 2 – LED bir soniya davomida yonsin.</h5><hr>
+            <img src="../files/v4/circuit.png" width="500" alt="4-variant"><hr>
+            C++ (Arduino) kod:<br><textarea name="v4t1" id="cpp" cols="60" rows="10" readonly="true">
+int ledPin = 5;  
+int ledPin2 = 3;
+void setup() {
+    pinMode(ledPin, OUTPUT);   
+    pinMode(ledPin2, OUTPUT);   
+}
+void loop() {
+    for (int fadeValue = 0 ; fadeValue <= 255; fadeValue = fadeValue+5) {
+        analogWrite(ledPin, fadeValue);
+        delay(30);
+    }
+    for (int fadeValue = 255 ; fadeValue >= 0; fadeValue = fadeValue-5) {
+        analogWrite(ledPin, fadeValue);
+        delay(30);
+    }
+    for (int fadeValue = 0 ; fadeValue <= 255; fadeValue = fadeValue+5) {
+        analogWrite(ledPin2, fadeValue);
+        delay(30);
+    }
+    for (int fadeValue = 255 ; fadeValue >= 0; fadeValue = fadeValue-5) {
+        analogWrite(ledPin2, fadeValue);
+        delay(30);
+    }
+}</textarea><hr>
             <h3>2-topshiriq</h3><hr>
-            <h5></h5><hr>
-            C++:<br><textarea name="v4t2" id="cpp" cols="60" rows="10" readonly="true"></textarea><hr>
+            <h5>Internet ilovalarni ishlab chiqish fanidan fanidan amaliy vazifa:<br>
+            Foydalanuvchiga bir, ikki yoki uch xonali raqamni kiritib,<br> ushbu raqamni so‘z bilan chop etadigan dastur yaratishga ruxsat bering. <br>Мasalan: 651 raqamini kiriting.</h5><hr>
+            HTML:<br><textarea name="v4t2" id="html" cols="60" rows="10" readonly="true">
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonni so'zlar bilan tasvirlash</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <input type="number" class="input">
+    <div class="info-box">
+        <p class="info1"></p>
+        <p class="info2"></p>
+        <p class="info3"></p>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html></textarea><hr>
+            CSS:<br><textarea name="v4t2" id="css" cols="60" rows="10" readonly="true">
+.info-box {
+    display: flex;
+    gap: 5px;
+}</textarea><hr>
+            JavaScript:<br><textarea name="v4t2" id="js" cols="60" readonly="true" rows="10">
+const info1 = document.querySelector(".info1");
+const info2 = document.querySelector(".info2");
+const info3 = document.querySelector(".info3");
+const input = document.querySelector(".input");
+input.addEventListener("input", (e) => {
+    const x = e.target.value;
+    if(x > 0 && x <= 999) {
+        switch(Math.floor(x/100)) {
+            case 1:
+                info1.innerHTML = "bir yuz "; break;
+            case 2:
+                info1.innerHTML = "ikki yuz "; break;
+            case 3:
+                info1.innerHTML = "uch yuz "; break;
+            case 4:
+                info1.innerHTML = "to'rt yuz "; break;
+            case 5:
+                info1.innerHTML = "besh yuz "; break;
+            case 6:
+                info1.innerHTML = "olti yuz "; break;
+            case 7:
+                info1.innerHTML = "yetti yuz "; break;
+            case 8:
+                info1.innerHTML = "sakkiz yuz "; break;
+            case 9:
+                info1.innerHTML = "to'qqiz yuz "; break;
+        }
+        switch(Math.floor((x/10)%10)) {
+            case 1:
+                info2.innerHTML = "o'n "; break;
+            case 2:
+                info2.innerHTML = "yigirma "; break;
+            case 3: 
+                info2.innerHTML = "o'ttiz "; break;
+            case 4:
+                info2.innerHTML = "qirq "; break;
+            case 5:
+                info2.innerHTML = "ellik "; break;
+            case 6:
+                info2.innerHTML = "oltmish "; break;
+            case 7:
+                info2.innerHTML = "yetmish "; break;
+            case 8:
+                info2.innerHTML = "sakson "; break;
+            case 9:
+                info2.innerHTML = "to'qson "; break;
+        }
+        switch(Math.floor(x%10)) {
+            case 1:
+                info3.innerHTML = "bir "; break;
+            case 2:
+                info3.innerHTML = "ikki "; break;
+            case 3:
+                info3.innerHTML = "uch "; break;
+            case 4:
+                info3.innerHTML = "to'rt "; break;
+            case 5:
+                info3.innerHTML = "besh "; break;
+            case 6:
+                info3.innerHTML = "olti ";  break;
+            case 7:
+                info3.innerHTML = "yetti "; break;
+            case 8:
+                info3.innerHTML = "sakkiz "; break;
+            case 9:
+                info3.innerHTML = "to'qqiz "; break;
+        }
+    }
+    if(x == 0) {
+        info1.innerHTML = "nol";
+        info2.innerHTML = "";
+        info3.innerHTML = "";
+    }
+    if(x > 999 || x < 0) {
+        info1.innerHTML = "Bu son berilgan oraliqda emas";
+        info2.innerHTML = "";
+        info3.innerHTML = "";
+    }
+})</textarea><hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>
