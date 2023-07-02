@@ -9,7 +9,6 @@
 }
 
 .container {
-    user-select: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,8 +42,5 @@ textarea {
     color: #FFF;
     outline: none;
     border-radius: 10px;
-}
-pre {
-    user-select: all;
 }
 /* @HanSiBinUz */
