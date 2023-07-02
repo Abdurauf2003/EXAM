@@ -29,6 +29,7 @@ h1, h3, h5 {
 img {
     border: 1px solid black;
     margin: 10px;
+    z-index: 1000;
     transition: 1s;
 }
 img:hover {
