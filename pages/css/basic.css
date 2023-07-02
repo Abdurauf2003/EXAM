@@ -44,4 +44,7 @@ textarea {
     outline: none;
     border-radius: 10px;
 }
+pre {
+    user-select: contain;
+}
 /* @HanSiBinUz */
