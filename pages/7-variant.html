@@ -7,82 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7-variant</title>
     <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="../files/v1/styles.css">
 </head>
 
 <body>
     <div class="container">
         <div class="card">
-            <h1>7-variant</h1><hr>
-            <h3>1-topshiriq</h3><hr>
+            <h1>7-variant</h1>
+            <hr>
+            <h3>1-topshiriq</h3>
+            <hr>
             <h5>Internet vositalari tizimi fanidan amaliy vazifa:<br>
-                Quyidagi elementlardan 1 - Tugmani bosganingizda 1-LED yonadigan, <br> 2-tugmani bosganda 2-LED yonadigan, <br> 3-tugmani bosganda 3-LED yonadigan dasturni tuzing.</h5><hr>
-            <img src="../files/v7/circuit.png" alt="7-variant" width="500"><hr>
-            C++ (Arduino) kod:<br><textarea name="v7t1" id="cpp" cols="60" rows="10" readonly="true">
-int val1; 
-int val2;
-int val3;
-void setup() {
-    pinMode(12,INPUT);
-    pinMode(9,INPUT);
-    pinMode(5,INPUT);
-    int led1=11;
-    int led2=8;
-    int led3=4;
-    pinMode(11,OUTPUT);
-    pinMode(8,OUTPUT);
-    pinMode(4,OUTPUT);
-    pinMode(13,OUTPUT);
-}               
-void loop() {
-    val1 = digitalRead(12);
-    val2 = digitalRead(9);
-    val3 = digitalRead(5);
-    if(val1 == HIGH) {
-        digitalWrite(11,HIGH);
-        digitalWrite(8,LOW);
-        digitalWrite(4,LOW);
-    } else if(val2 == HIGH) {
-        digitalWrite(8,HIGH);
-        digitalWrite(11,LOW);
-        digitalWrite(4,LOW);
-    } else if(val3 == HIGH) {
-        digitalWrite(4,HIGH);
-        digitalWrite(11,LOW);
-        digitalWrite(8,LOW);
-    } else {
-        digitalWrite(13,HIGH);
-    }
-}</textarea><hr>
-            <h3>2-topshiriq</h3><hr>
+                Quyidagi elementlardan 1 - Tugmani bosganingizda 1-LED yonadigan, <br> 2-tugmani bosganda 2-LED
+                yonadigan, <br> 3-tugmani bosganda 3-LED yonadigan dasturni tuzing.</h5>
+            <hr>
+            <img src="../files/v7/circuit.png" alt="7-variant" width="500">
+            <hr>
+            C++ (Arduino) kod:<br>
+            <center>
+                <pre id="file-content1"></pre>
+                <button class="copy-btn1">Nusxalash</button>
+            </center>
+            <hr>
+            <h3>2-topshiriq</h3>
+            <hr>
             <h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:<br>
-            Ko'paytirish (Karra) jadvalini tekshirish dasturi tuzilsin. <br>
-            Foydalanuvchi 2 ta son kiritsin. Bu sonlarning qiymatlari <br>
-            1 dan katta, 9 dan kichikligini tekshirilsin. Ikki sondan keyin <br>
-            ularning ko'paytmasi javobi ham kiritilsin. Agar javob to'gri kiritilsa, <br>
-            foydalanuvchini tabriklansin, agar javob notog'ri bo'lsa uni ko'paytirish <br>
-            jadvalini yodlashi va to'g'ri javob haqidagi habar bersin.</h5><hr>
-            C++:<br><textarea name="v7t2" id="cpp" cols="60" rows="10" readonly="true">
-#include <iostream>
-#include <math.h>
-using namespace std;
-int main() {
-    int a, b, c;
-    cout << "1-sonni kiriting: "; cin >> a;
-    cout << "2-sonni kiriting: "; cin >> b;
-    cout << a << " * " << b << " = "; cin >> c;
-    if((a > 1 && a < 9) && (b > 1 && b < 9)) {
-        if(c == a * b) {
-            cout << "Tabriklaymiz javobni to'g'ri topdingiz";
-        } else {
-            cout << "Javob xato, ko'paytirish jadvalini yodlang, to'g'ri javob: " << a * b;
-        }
-    } else {
-        cout << "Kiritilgan son berilgan oraliqda emas";
-    } return 0;
-}</textarea><hr>
+                Ko'paytirish (Karra) jadvalini tekshirish dasturi tuzilsin. <br>
+                Foydalanuvchi 2 ta son kiritsin. Bu sonlarning qiymatlari <br>
+                1 dan katta, 9 dan kichikligini tekshirilsin. Ikki sondan keyin <br>
+                ularning ko'paytmasi javobi ham kiritilsin. Agar javob to'gri kiritilsa, <br>
+                foydalanuvchini tabriklansin, agar javob notog'ri bo'lsa uni ko'paytirish <br>
+                jadvalini yodlashi va to'g'ri javob haqidagi habar bersin.</h5>
+            <hr>
+            C++:<br>
+            <center>
+                <pre id="file-content2"></pre>
+                <button class="copy-btn2">Nusxalash</button>
+            </center>
+            <hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>
+    <script type="text/javascript" src="../files/v7/app1.js"></script>
+    <script type="text/javascript" src="../files/v7/app2.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Sonlarni harflarga konvertator</title>
   <link rel="stylesheet" href="./style.css">
   <script>
     function convertToLetters() {
-      var units = ["", "bir", "ikki",  "uch", "to'rt'", "besh", "olti", "yetti", "sakkiz", "to'qqiz"];
-      var teens = ["o'n", "o'n bir", "o'n ikki", "o'n uch", "o'n to'rt", "o'n besh", "o'n olti", "o'n yetti", "o'n sakkiz", "o'n to'qqiz"];
+      var units = ["", "bir", "ikki", "uch", "to'rt'", "besh", "olti", "yetti", "sakkiz", "to'qqiz"];
+      var teens = ["o'n", "o'n bir", "o'n ikki", "o'n uch", "o'n to'rt", "o'n besh", "o'n olti", "o'n yetti",
+        "o'n sakkiz", "o'n to'qqiz"
+      ];
       var tens = ["", "", "yigirma", "o'ttiz", "qirq", "ellik", "oltmish", "yetmish", "sakson", "to'qson"];
-      var hundreds = ["", "yuz", "ikki yuz", "uch yuz", "to'rt yuz", "besh yuz", "olti yuz", "yetti yuz", "sakkiz yuz", "to'qqiz yuz"];
+      var hundreds = ["", "yuz", "ikki yuz", "uch yuz", "to'rt yuz", "besh yuz", "olti yuz", "yetti yuz", "sakkiz yuz",
+        "to'qqiz yuz"
+      ];
 
       var number = parseInt(document.getElementById("number").value);
       var result = "";
@@ -42,6 +47,7 @@
     }
   </script>
 </head>
+
 <body>
   <h1>Sonlarni harflarga konvertator</h1>
   <p>Raqam kiriting (1 dan 999 gacha):</p>
@@ -49,4 +55,5 @@
   <button onclick="convertToLetters()">KONVERT</button>
   <p id="result"></p>
 </body>
+
 </html>

@@ -7,140 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11-variant</title>
     <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="../files/v1/styles.css">
 </head>
 
 <body>
     <div class="container">
         <div class="card">
-            <h1>11-variant</h1><hr>
-            <h3>1-topshiriq</h3><hr>
+            <h1>11-variant</h1>
+            <hr>
+            <h3>1-topshiriq</h3>
+            <hr>
             <h5>Internet vositalari tizimi fanidan amaliy vazifa:<br>
-            Tugma bosilganda servoprivod 15 gradusga o’girilishi dasturini tuzing.</h5><hr>
-            <img src="../files/v11/circuit.png" alt="11-variant" width="500"><hr>
-            C++ (Arduino) kod:<br><textarea name="v11t1" id="cpp" cols="60" rows="10" readonly="true">
-#include <servo.h>
-int push = 0;
-Servo servo_9;
-void setup()
-{
-    pinMode(2, INPUT);
-    Serial.begin(9600);
-    servo_9.attach(9, 500, 2500);
-}
-void loop() 
-{
-    push = digitalRead(2);
-    Serial.println(push);
-    if(push == 1) {
-        servo_9.write(15);
-    } else {
-        servo_9.write(0);
-    }
-    delay(10);
-}</textarea><hr>
-            <h3>2-topshiriq</h3><hr>
+                Tugma bosilganda servoprivod 15 gradusga o’girilishi dasturini tuzing.</h5>
+            <hr>
+            <img src="../files/v11/circuit.png" alt="11-variant" width="500">
+            <hr>
+            C++ (Arduino) kod:<br>
+            <center>
+                <pre id="file-content1"></pre>
+                <button class="copy-btn1">Nusxalash</button>
+            </center>
+            <hr>
+            <h3>2-topshiriq</h3>
+            <hr>
             <h5>Internet ilovalarni ishlab chiqish fanidan fanidan amaliy vazifa:
-            <br>Yilda 12 oy berigan. Shu oylarni faslarga ajratish.</h5><hr>
-            HTML:<br><textarea name="v11t2" id="html" cols="60" rows="10" readonly="true">
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fasllar</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <form>
-        <select class="month">
-            <option></option>
-            <option>Yanvar</option>
-            <option>Fevral</option>
-            <option>Mart</option>
-            <option>Aprel</option>
-            <option>May</option>
-            <option>Iyun</option>
-            <option>Iyul</option>
-            <option>Avgust</option>
-            <option>Sentabr</option>
-            <option>Oktabr</option>
-            <option>Noyabr</option>
-            <option>Dekabr</option>
-        </select>
-        <button type="button" class="btn">Fasllarga ajratish</button>
-        <p class="info"></p>
-    </form>
-    <script src="./script.js"></script>
-</body>
-</html></textarea><hr>
-            CSS:<br><textarea name="v11t2" id="css" cols="60" rows="10" readonly="true">/* No code */</textarea><hr>
-            JavaScript:<br><textarea name="v11t2" id="js" cols="60" readonly="true" rows="10">
-const selectedMonth = document.querySelector(".month");
-const button = document.querySelector(".btn");
-const info = document.querySelector(".info");
-let month;
-selectedMonth.addEventListener("click", (e) => {
-    month = e.target.value;
-})
-button.addEventListener("click", () => {
-    switch (month) {
-        case "Dekabr": 
-        case "Yanvar": 
-        case "Fevral": 
-            info.innerHTML = "Qish fasli"; break;
-        case "Mart": 
-        case "Aprel": 
-        case "May": 
-            info.innerHTML = "Bahor fasli"; break;
-        case "Iyun": 
-        case "Iyul": 
-        case "Avgust": 
-            info.innerHTML = "Yoz fasli"; break;
-        case "Sentabr": 
-        case "Oktabr": 
-        case "Noyabr": 
-            info.innerHTML = "Kuz fasli"; break;
-        default:
-            info.innerHTML = "Bunday oy mavjud emas"; break;
-    }
-})</textarea><hr>
-<h3>3-topshiriq</h3><hr>
-<h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:
-<br>Sport zalga turli yoshdagi mijozlar tashrif buyurishadi. <br>
-Foydalanuvchi zalga nechta mijoz tashrif buyurgani kiritganidan so‘ng <br>
-har bir mijozni yoshi so‘ralsin va yosh qiymati foydalanuvchi tomonidan kiritilsin. <br>
-Yakunda sport zalga tashrif buyurgan mijozlar soni, ularning eng kichik, <br>
-eng katta va o‘rtacha mijozlarning yoshi haqida ma’lumot beradigan dastur tuzilsin.</h5><hr>
-C++:<br><textarea name="v11t3" id="cpp" cols="60" rows="10" readonly="true">
-#include <iostream>
-using namespace std;
-class Users {
-    public: 
-        int count, age, small=100, large=0, sum=0, average;
-};
-int main() {
-    Users userObj;
-    cout << "Mijozlarning sonini kiriting: "; cin >> userObj.count;
-    for(int i=1; i<=userObj.count; i++) {
-        cout << i << "-mijozning yoshini kiriting: "; cin >> userObj.age;
-        if(userObj.age < userObj.small) {
-            userObj.small = userObj.age;
-        } else if(userObj.age > userObj.large) {
-            userObj.large = userObj.age;
-        }
-        userObj.sum+=userObj.age;
-        userObj.average = userObj.sum/userObj.count;
-    }
-    cout << "\nMijozlarning soni: " << userObj.count;
-    cout << "\nEng kichik yosh: " << userObj.small;
-    cout << "\nEng katta yosh: " << userObj.large;
-    cout << "\nO'rtacha yosh: " << userObj.average;
-    return 0;
-}</textarea><hr>
+                <br>Yilda 12 oy berigan. Shu oylarni faslarga ajratish.</h5>
+            <hr>
+            HTML:<br>
+            <center>
+                <pre id="file-content2"></pre>
+                <button class="copy-btn2">Nusxalash</button>
+            </center>
+            <hr>
+            JavaScript:<br>
+            <center>
+                <pre id="file-content3"></pre>
+                <button class="copy-btn3">Nusxalash</button>
+            </center>
+            <hr>
+            <h3>3-topshiriq</h3>
+            <hr>
+            <h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:
+                <br>Sport zalga turli yoshdagi mijozlar tashrif buyurishadi. <br>
+                Foydalanuvchi zalga nechta mijoz tashrif buyurgani kiritganidan so‘ng <br>
+                har bir mijozni yoshi so‘ralsin va yosh qiymati foydalanuvchi tomonidan kiritilsin. <br>
+                Yakunda sport zalga tashrif buyurgan mijozlar soni, ularning eng kichik, <br>
+                eng katta va o‘rtacha mijozlarning yoshi haqida ma’lumot beradigan dastur tuzilsin.</h5>
+            <hr>
+            C++:<br>
+            <center>
+                <pre id="file-content4"></pre>
+                <button class="copy-btn4">Nusxalash</button>
+            </center>
+            <hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>
+    <script type="text/javascript" src="../files/v11/app1.js"></script>
+    <script type="text/javascript" src="../files/v11/app2.js"></script>
+    <script type="text/javascript" src="../files/v11/app3.js"></script>
+    <script type="text/javascript" src="../files/v11/app4.js"></script>
 </body>
 
 </html>

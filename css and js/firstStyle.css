@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/impact');
 @import url('https://fonts.cdnfonts.com/css/arial-narrow-7');
 @import url('https://fonts.cdnfonts.com/css/lucida-console');
+
 * {
     margin: 0;
     padding: 0;
@@ -50,23 +51,28 @@ select:hover {
     color: white;
     transition: 2.5s;
 }
+
 #warning {
     border: 1px solid red;
     margin-top: 10px;
     background: rgba(255, 255, 255, 0.5);
 }
+
 ul#ulo {
     border: 1px red solid;
     list-style: none;
     background: rgba(255, 255, 255, 0.5);
     padding: 10px;
 }
+
 li {
     font-family: 'Lucida Console', sans-serif;
 }
+
 h3 {
     margin-top: 200px;
     text-decoration: none;
     user-select: none;
 }
+
 /* @HanSiBinUz */

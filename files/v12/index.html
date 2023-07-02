@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pul konvertori</title>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <h1>Pul konvertori</h1>
+
+    <label for="amount">Pul:</label>
+    <input type="number" id="amount" step="0.01"><br><br>
+
+    <label for="currency">Valyuta turini tanlang:</label>
+    <select id="currency">
+        <option value="usd-to-uzs">Dollarni So'mga ($ - So'm)</option>
+        <option value="uzs-to-usd">So'mni Dollarga (So'm - $)</option>
+    </select><br><br>
+
+    <button onclick="convertCurrency()">Konvertatsiya</button><br><br>
+
+    <div id="result"></div>
+</body>
+
+</html>

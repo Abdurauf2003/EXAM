@@ -7,130 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12-variant</title>
     <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="../files/v1/styles.css">
 </head>
 
 <body>
     <div class="container">
         <div class="card">
-            <h1>12-variant</h1><hr>
-            <h3>1-topshiriq</h3><hr>
+            <h1>12-variant</h1>
+            <hr>
+            <h3>1-topshiriq</h3>
+            <hr>
             <h5>Internet vositalari tizimi fanidan amaliy vazifa:<br>
-            Arduino platasini yoqganingizda, RGB LED qizil yonadi, <br>
-            keyin ko'k, keyin yashil yonadi. Qizil 2 soniya, ko'k 5 soniya, <br>
-            yashil 10 soniya yonadigan dastur tuzing.</h5><hr>
-            <img src="../files/v12/circuit.png" width="500" alt="12-variant"><hr>
-            C++ (Arduino) kod:<br><textarea name="v12t1" id="cpp" cols="60" rows="10" readonly="true">
-void setup()
-{
-  pinMode(11, OUTPUT);
-  pinMode(10, OUTPUT);
-  pinMode(9, OUTPUT);
-}
-void loop()
-{
-  analogWrite(11, 255);
-  analogWrite(10, 0);
-  analogWrite(9, 0);
-  delay(2000); 
-  analogWrite(11, 0);
-  analogWrite(10, 255);
-  analogWrite(9, 0);
-  delay(5000);
-  analogWrite(11, 0);
-  analogWrite(10, 0);
-  analogWrite(9, 255);
-  delay(10000); 
-}</textarea><hr>
-            <h3>2-topshiriq</h3><hr>
+                Arduino platasini yoqganingizda, RGB LED qizil yonadi, <br>
+                keyin ko'k, keyin yashil yonadi. Qizil 2 soniya, ko'k 5 soniya, <br>
+                yashil 10 soniya yonadigan dastur tuzing.</h5>
+            <hr>
+            <img src="../files/v12/circuit.png" width="500" alt="12-variant">
+            <hr>
+            C++ (Arduino) kod:<br>
+            <center>
+                <pre id="file-content1"></pre>
+                <button class="copy-btn1">Nusxalash</button>
+            </center>
+            <hr>
+            <h3>2-topshiriq</h3>
+            <hr>
             <h5>Internet ilovalarni ishlab chiqish fanidan fanidan amaliy vazifa:<br>
-            Dollarni so'mga va so'mni dollarga o'giradigan dasturni tuzing. <br>
-            Foydalanuvchi pulni kiritishi kerak bo'ladi, &lt;select&gt; orqali <br>
-            pul jinsini tanlash kerak bo'ladi, va “o'girish” tugmasini bosishi kerak bo'ladi.</h5><hr>
-            HTML:<br><textarea name="v12t2" id="html" cols="60" rows="10" readonly="true">
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dollar</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <form>
-        <label>
-            Pul miqdorini kiriting: 
-            <input type="text" class="input">
-            <select class="valyuta">
-                <option></option>
-                <option>So'mdan dollarga</option>
-                <option>Dollardan so'mga</option>
-            </select>
-            <button type="button" class="btn">O'g'irish</button>
-            <p class="info"></p>
-        </label>
-    </form>
-    <script src="./script.js"></script>
-</body>
-</html></textarea><hr>
-CSS:<br><textarea name="v12t2" id="css" cols="60" rows="10" readonly="true">/* No code */</textarea><hr>
-JavaScript:<br><textarea name="v12t2" id="js" cols="60" rows="10" readonly="true">
-const currency = document.querySelector(".valyuta");
-const input = document.querySelector(".input");
-const button = document.querySelector(".btn");
-const info = document.querySelector(".info");
-let money;
-let selected;
-input.addEventListener("input", (e) => {
-    money = +e.target.value;
-})
-currency.addEventListener("click", (e) => {
-    selected = e.target.value;
-})
-button.addEventListener("click", () => {
-    if(selected === "So'mdan dollarga") {
-        info.innerHTML = ${money} so'm ${Math.floor(money/11450)} dollar;
-    } else if(selected === "Dollardan so'mga") {
-        info.innerHTML = ${money} dollar ${money*11450} so'm bo'ladi;
-    } else {
-        info.innerHTML = "Valyuta kiritilmadi";
-    }
-})</textarea><hr>
-            <h3>3-topshiriq</h3><hr>
+                Dollarni so'mga va so'mni dollarga o'giradigan dasturni tuzing. <br>
+                Foydalanuvchi pulni kiritishi kerak bo'ladi, &lt;select&gt; orqali <br>
+                pul jinsini tanlash kerak bo'ladi, va “o'girish” tugmasini bosishi kerak bo'ladi.</h5>
+            <hr>
+            HTML:<br>
+            <center>
+                <pre id="file-content2"></pre>
+                <button class="copy-btn2">Nusxalash</button>
+            </center>
+            <hr>
+
+            JavaScript:<br>
+            <center>
+                <pre id="file-content3"></pre>
+                <button class="copy-btn3">Nusxalash</button>
+            </center>
+            <hr>
+            <h3>3-topshiriq</h3>
+            <hr>
             <h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:<br>
-            Omborda ma'lum sondagi qutilar mavjud (qutilar sonini foydalanuvchi kiritadi).<br>
-            Yuk mashinalari birma-bir kelganda ularga ortiladigan qutilar soni <br>
-            foydalanuvchilar tomonidan kiritilib borilsin. Mashinaga omborda qolgan qutilar <br>
-            sonidan ko'p quti ortilishi berilsa foydalanuvchiga bu haqida ma'lumot berilsin, <br>
-            omborda qolgan qutilar sonini ko'rsatsin va ushbu tartibdagi yuk mashinasiga <br>
-            qayta quti ortilishi so'ralsin. Agar ombordagi barcha qutilar yuk mashinalariga <br>
-            ortib bo'linsa qutilar qolmaganligi haqida habar beradigan dastur tuzilsin.</h5><hr>
-            C++:<br><textarea name="v12t3" id="cpp" cols="60" rows="10" readonly="true">
-#include <iostream>
-using namespace std;
-class Traders {
-    public: 
-        int count, goods;
-}
-int main() {
-    Traders traderObj;
-    cout << "Qutilar sonini kiriting: "; cin >> traderObj.count;
-    for(int i=1; i<=traderObj.count; i++) {
-        cout << i << "-yuk mashinasiga ortiladigan qutilar: "; cin >> traderObj.goods;
-        if(traderObj.count>=traderObj.goods) {
-            traderObj.count = traderObj.count - traderObj.goods;
-            if(traderObj.count == 0) {
-                cout << "Omborda qutilar qolmadi";
-            }
-        } else if(traderObj.count < traderObj.goods) {
-            cout << "Omborda " << traderObj.count << " ta quti bor, qutilar soni " << traderObj.count << " dan oshmasligi kerak" << endl;
-        }
-    }
-    return 0;
-}</textarea><hr>
+                Omborda ma'lum sondagi qutilar mavjud (qutilar sonini foydalanuvchi kiritadi).<br>
+                Yuk mashinalari birma-bir kelganda ularga ortiladigan qutilar soni <br>
+                foydalanuvchilar tomonidan kiritilib borilsin. Mashinaga omborda qolgan qutilar <br>
+                sonidan ko'p quti ortilishi berilsa foydalanuvchiga bu haqida ma'lumot berilsin, <br>
+                omborda qolgan qutilar sonini ko'rsatsin va ushbu tartibdagi yuk mashinasiga <br>
+                qayta quti ortilishi so'ralsin. Agar ombordagi barcha qutilar yuk mashinalariga <br>
+                ortib bo'linsa qutilar qolmaganligi haqida habar beradigan dastur tuzilsin.</h5>
+            <hr>
+            C++:<br>
+            <center>
+                <pre id="file-content4"></pre>
+                <button class="copy-btn4">Nusxalash</button>
+            </center>
+            <hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>
+    <script type="text/javascript" src="../files/v12/app1.js"></script>
+    <script type="text/javascript" src="../files/v12/app2.js"></script>
+    <script type="text/javascript" src="../files/v12/app3.js"></script>
+    <script type="text/javascript" src="../files/v12/app4.js"></script>
 </body>
 
 </html>
