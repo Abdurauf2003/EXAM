@@ -1,0 +1,9 @@
+body{
+    font-family: Segoe UI;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding:10px;
+    gap: 5px;
+}
