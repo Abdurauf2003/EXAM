@@ -6,9 +6,9 @@ window.addEventListener('DOMContentLoaded', function() {
     xhr.onload = function() {
       if (xhr.status === 200) {
         var fileContent = xhr.responseText;
-        var fileContentElement = document.getElementById('file-content-3');
+        var fileContentElement = document.getElementById('file-content3');
         fileContentElement.textContent = fileContent;
-        var copyBtn = document.querySelector('.copy-btn-3');
+        var copyBtn = document.querySelector('.copy-btn3');
         copyBtn.addEventListener('click', function() {
           var range = document.createRange();
           range.selectNodeContents(fileContentElement);
