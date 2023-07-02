@@ -1,0 +1,10 @@
+form{
+    font-family:Tahoma;
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    position: relative;
+    gap: 5px;
+}

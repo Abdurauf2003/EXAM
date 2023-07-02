@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uchburchak yuzi va perimetrini hisoblash</title>
+    <link rel="stylesheet" href="./style.css"
+</head>
+<body>
+    <form class="form">
+        <label>
+            a-tomonni kiriting
+            <input type="number" class="input">
+        </label>
+        <label>
+            b-tomonni kiriting
+            <input type="number" class="input">
+        </label>
+        <label>
+            c-tomonni kiriting
+            <input type="number" class="input">
+        </label>
+        <button type="button" class="btn">Hisoblash</button>
+        <p class="info"></p>
+    </form>
+    <script>
+        const inputs = document.querySelectorAll(".input");
+        const button = document.querySelector(".btn");
+        const info = document.querySelector(".info");
+
+        button.addEventListener("click", () => {
+            const [a, b, c] = [...inputs].map(input => +input.value);
+
+            const area = a * b / 2;
+            const perimeter = a + b + c;
+
+            info.innerHTML = `Uchburchak yuzi: ${area}<br>Uchburchak perimetri: ${perimeter}`;
+        });
+    </script>
+</body>
+</html>
