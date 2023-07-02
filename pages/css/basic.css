@@ -45,6 +45,6 @@ textarea {
     border-radius: 10px;
 }
 pre {
-    user-select: contain;
+    user-select: all;
 }
 /* @HanSiBinUz */
