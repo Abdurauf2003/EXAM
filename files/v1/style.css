@@ -14,9 +14,9 @@ pre {
     font-family: 'Lucida Console', sans-serif;
 }
 
-.copy-btn-1,
-.copy-btn-2,
-.copy-btn-3 {
+.copy-btn1,
+.copy-btn2,
+.copy-btn3 {
     display: block;
     margin: 0px 0px 5px 0px;
     padding: 0px 10px;
