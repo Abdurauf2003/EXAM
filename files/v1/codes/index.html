@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<button class="buttons" onclick="showInfo('Qo\'yliqga 7 va 93 avtobuslar boradi')">Qo'yliq</button>
+<button class="buttons" onclick="showInfo('Chorsuga 3, 54 va 12 avtobuslar boradi')">Chorsu</button>
+<button class="buttons" onclick="showInfo('Oloyga 434, 5545 va 11111 avtobuslar boradi')">Oloy</button>
+
+<p id="info"></p>
+
+<script>
+    function showInfo(info) {
+        document.getElementById("info").innerHTML = info;
+    }
+</script>
+</body>
+</html>
