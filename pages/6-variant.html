@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6-variant</title>
     <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="../files/v1/styles.css">
 </head>
 
 <body>
@@ -16,72 +17,26 @@
             <h3>1-topshiriq</h3><hr>
             <h5>OYD va tarmoq dasturlash (C++, Java) fanidan fanidan amaliy vazifa:<br>
             Maxsulot narxini kiriting. Kiritilgan summani mavjud <br> kupyuralarda ( 100, 200, 500, 1000, 5000, 10000, 50000 so‘mlik) soni jihatidan eng kam <br> amalga oshirib to‘lash dasturi tuzilsin.</h5><hr>
-            C++:<br><textarea name="v6t1" id="cpp" cols="60" rows="10" readonly="true">
-#include <iostream>
-using namespace std;
-int main() {
-    int amount;
-    int currencies[7] = {50000, 10000, 5000, 1000, 500, 200, 100};
-    int countCurrency[7] = {0};
-    cout << "Pul miqdorini kiriting: "; cin >> amount;
-    for(int i=0; i<7; i++) {
-        if(amount >= currencies[i]) {
-            countCurrency[i] = amount/currencies[i];
-            amount = amount%currencies[i];
-        }
-    }
-    cout << "Kupyuralar soni: ";
-    for(int i = 0; i<7; i++) {
-        if(countCurrency[i] != 0) {
-            cout << currencies[i] << ": " << countCurrency[i] << endl;
-        }
-    }
-    return 0;
-}</textarea><hr>
+            C++:<br>
+            <center>
+              <pre id="file-content1"></pre>
+              <button class="copy-btn1">Nusxalash</button>
+          </center><hr>
             <h3>2-topshiriq</h3><hr>
             <h5>Internet vositalari tizimi fanidan amaliy vazifa:
             <br>Quyidagi elementlardan Potensiometr ni aylantirganingizda 
             <br>LED lar ketma ket yonadigan  dasturni tuzing.</h5><hr>
             <img width="500" src="../files/v6/circuit.png" alt="6-variant"><hr>
-            C++ (Arduino) kod:<br><textarea name="v6t2" id="cpp" cols="60" rows="10" readonly="true">
-int potPin = A5;
-int led1Pin = 4;
-int led2Pin = 3;
-int led3Pin = 2;
-void setup()
-{
-  pinMode(potPin, INPUT);
-  pinMode(led1Pin, OUTPUT);
-  pinMode(led2Pin, OUTPUT);
-  pinMode(led3Pin, OUTPUT);
-  Serial.begin(9600);
-}
-void loop()
-{
-  int potMeasure = analogRead(A5);
-  Serial.println(potMeasure);
-  if(potMeasure > 0 && potMeasure < 341)
-  {
-    digitalWrite(led1Pin,HIGH);
-    digitalWrite(led2Pin,LOW);
-    digitalWrite(led3Pin,LOW);
-  }
-  else if(potMeasure > 340 && potMeasure < 682)
-  {
-    digitalWrite(led1Pin,HIGH);
-    digitalWrite(led2Pin,HIGH);
-    digitalWrite(led3Pin,LOW);
-  }
-  else if(potMeasure > 681 && potMeasure < 1024)
-  {
-    digitalWrite(led1Pin,HIGH);
-    digitalWrite(led2Pin,HIGH);
-    digitalWrite(led3Pin,HIGH);
-  }
-}</textarea><hr>
+            C++ (Arduino) kod:<br>
+            <center>
+              <pre id="file-content2"></pre>
+              <button class="copy-btn2">Nusxalash</button>
+          </center><hr>
             <h3><a href="../index.html">* BOSH SAHIFA *</a></h3>
         </div>
     </div>
+    <script type="text/javascript" src="../files/v6/app1.js"></script>
+    <script type="text/javascript" src="../files/v6/app2.js"></script>
 </body>
 
 </html>
