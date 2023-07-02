@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
-    var filePath = '../files/v1/codes/arduino1.ino';
+    var filePath = '../files/v1/arduino1.ino';
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'text';
     xhr.open('GET', filePath, true);

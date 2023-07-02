@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
-    var filePath = '../files/v1/codes/index.html';
+    var filePath = '../files/v1/index.html';
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'text';
     xhr.open('GET', filePath, true);
@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
           window.getSelection().removeAllRanges();
           window.getSelection().addRange(range);
           try {
-            var successful = document.execCommand('copy');
+            var successful = document.execCommand("copy");
             var message = successful ? 'Copied!' : 'Copy failed!';
             console.log(message);
             if (successful == true) {
