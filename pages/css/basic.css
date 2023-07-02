@@ -10,6 +10,7 @@
 
 .container {
     display: flex;
+    user-select: none;
     justify-content: center;
     align-items: center;
     width: 100%;

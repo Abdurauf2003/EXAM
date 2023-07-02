@@ -12,6 +12,7 @@ pre {
     text-decoration: none;
     padding: 10px;
     font-family: 'Lucida Console', sans-serif;
+    user-select: all;
 }
 
 .copy-btn1,
