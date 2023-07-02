@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/lucida-console');
+
 pre {
     white-space: pre-wrap;
     border: 2.5px black solid;
@@ -17,14 +18,16 @@ pre {
 
 .copy-btn1,
 .copy-btn2,
-.copy-btn3 {
+.copy-btn3,
+.copy-btn4 {
     display: block;
     margin: 0px 0px 5px 0px;
     padding: 0px 10px;
     background-color: #4caf50;
     color: white;
-    
-    border: 2.5px solid black;border-top: none;
+
+    border: 2.5px solid black;
+    border-top: none;
     cursor: pointer;
     width: 500px;
     height: 30px;
