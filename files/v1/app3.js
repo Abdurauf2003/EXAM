@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
           window.getSelection().removeAllRanges();
           window.getSelection().addRange(range);
           try {
-            var successful = document.execCommand('copy');
+            var successful = document.execCommand("copy");
             var message = successful ? 'Copied!' : 'Copy failed!';
             console.log(message);
             if (successful == true) {
